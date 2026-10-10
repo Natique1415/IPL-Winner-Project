@@ -25,7 +25,6 @@ CLASS2_ACCURACY = (
     0.482  # Accuracy reported by class-2.py; update if its result changes.
 )
 
-# Load matches; deliveries.csv is not needed for these match-level features.
 matches = pd.read_csv("../../matches.csv")
 matches_clean = matches.drop_duplicates().copy()
 
@@ -435,4 +434,3 @@ plt.close(fig)
 
 print(f"\nDecision tree saved to: {tree_path}")
 print(f"Metrics plot saved to: {metrics_path}")
-

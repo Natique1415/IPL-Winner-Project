@@ -10,8 +10,6 @@
 - Loaded both CSV files using Pandas.
 - Inspected dataset dimensions, column names and missing values.
 - Identified columns with missing values and assessed their significance.
-- Verified team-name coverage across both datasets; no differences found.
-- Verified match ID relationships; no unmatched IDs or matches without deliveries were found.
 - Counted matches per team name and identified potential historical naming variations.( `Step-2/team-renaming.py` ) 
 
 

@@ -1,7 +1,6 @@
 import pandas as pd
 
 matches = pd.read_csv("../matches.csv")
-deliveries = pd.read_csv("../deliveries.csv")
 
 
 team_counts = pd.concat([matches["team1"], matches["team2"]]).value_counts()

@@ -21,11 +21,9 @@ from sklearn.metrics import (
 
 # Load the original datasets
 matches = pd.read_csv("../../matches.csv")
-deliveries = pd.read_csv("../../deliveries.csv")
 
 # Remove duplicate records
 matches_clean = matches.drop_duplicates().copy()
-deliveries_clean = deliveries.drop_duplicates().copy()
 
 # Standardize historical franchise names
 team_mapping = {
@@ -37,9 +35,6 @@ team_mapping = {
 
 for column in ["team1", "team2", "toss_winner", "winner"]:
     matches_clean[column] = matches_clean[column].replace(team_mapping)
-
-for column in ["batting_team", "bowling_team"]:
-    deliveries_clean[column] = deliveries_clean[column].replace(team_mapping)
 
 # Standardize venue names so one stadium is not split into several categories.
 # The raw data spells the same ground in several ways (with or without the
@@ -228,7 +223,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 print("Train Team 1 win share:", round(y_train.mean(), 3))
 print("Train accuracy:", round(accuracy_score(y_train, model.predict(X_train)), 3))
-print("Train predicted Team 1 share:", round(model.predict(X_train).mean(), 3))
+print("Train predicted Team 1 share:", round(model.predict(X_train).mean(), 3))  # type: ignore
 print(X_train["prior_win_rate_diff"].describe().round(3))
 print(X_test["prior_win_rate_diff"].describe().round(3))
 
@@ -432,7 +427,7 @@ def to_y(depth):
 
 
 fig = plt.figure(figsize=(fig_width, fig_height))
-ax = fig.add_axes([0, 0, 1, 1])
+ax = fig.add_axes([0, 0, 1, 1])  # type: ignore
 ax.set_xlim(0, fig_width)
 ax.set_ylim(0, fig_height)
 ax.axis("off")
