@@ -3,7 +3,7 @@
 ## Step 1: Data Collection
 **Location:** Dataset files in project root
 - Selected the [Kaggle IPL Complete Dataset (2008–2020) by `patrickb1912`.](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020/)
-- Downloaded `matches.csv` and `deliveries.csv`.
+- Downloaded `matches.csv`.
 
 ## Step 2: Data Understanding and Exploration 
 **File:** `Step-2/viewing-data.py`
