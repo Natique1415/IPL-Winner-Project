@@ -36,7 +36,7 @@ Move into the project directory:
 cd .\IPL-Winner-Project
 ```
 
-Confirm that `requirements.txt`, `matches.csv`, `deliveries.csv`, and the project folders are present.
+Make sure `matches.csv`, `deliveries.csv`, `requirements.txt`, and the project folders are present in the project root. If you have `deliveries.csv.zip`, extract `deliveries.csv` into the project root so it sits beside `matches.csv`.
 
 ## 3. Create and activate a virtual environment
 
@@ -73,8 +73,7 @@ python -m pip install -r requirements.txt
 1. `viewing-data.py`
 2. `team-renaming.py` (optional)
 3. `cleaning-data.py`
-4. `class-2.py`
-5. `class-3.py`
-6. `main.py`
-7. `class-6.py`
-8. `compare-models.py`
+4. `decision-tree.py`
+5. `nb.py`
+6. `knn.py`
+7. `compare-models.py`

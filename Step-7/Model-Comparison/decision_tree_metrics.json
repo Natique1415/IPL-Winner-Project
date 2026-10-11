@@ -1,8 +1,21 @@
 {
-    "accuracy": 0.48623853211009177,
-    "precision": 0.5,
-    "recall": 0.32142857142857145,
-    "specificity": 0.660377358490566,
-    "f1_score": 0.391304347826087,
-    "balanced_accuracy": 0.49090296495956875
+    "accuracy": 0.5,
+    "precision": 0.5441176470588235,
+    "recall": 0.34579439252336447,
+    "specificity": 0.6736842105263158,
+    "f1_score": 0.4228571428571429,
+    "balanced_accuracy": 0.5097393015248401,
+    "best_params": {
+        "max_depth": 3,
+        "min_samples_leaf": 20,
+        "min_samples_split": 2,
+        "class_weight": null,
+        "criterion": "entropy",
+        "random_state": 42
+    },
+    "best_cv_balanced_accuracy": 0.5452372804128022,
+    "train_matches": 888,
+    "test_matches": 202,
+    "test_start_date": "2022-04-09",
+    "test_end_date": "2024-05-26"
 }
