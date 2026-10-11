@@ -6,11 +6,11 @@ Use the classification techniques taught in class to predict IPL match winners. 
 **Location:** Dataset files in project root
 - Selected the [Kaggle IPL Complete Dataset by `patrickb1912`](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020/).
 - The URL still says 2008-2020, but the version used covers seasons 2008 to 2024 (1,095 matches in total).
-- Downloaded `matches.csv` and `deliveries.csv`.
+- Downloaded `matches.csv`.
 
 ## Step 2: Data Understanding and Exploration
 **File:** `Step-2/viewing-data.py`
-- Loaded both CSV files (`matches.csv`, `deliveries.csv`) using Pandas.
+- Loaded CSV file (`matches.csv`) using Pandas.
 - Inspected dataset dimensions, column names and missing values.
 - Identified columns with missing values and assessed their significance.
 - Counted matches per team name and identified potential historical naming variations (`Step-2/team-renaming.py`).
@@ -20,7 +20,6 @@ Use the classification techniques taught in class to predict IPL match winners. 
 **File:** `Step-3/cleaning-data.py`
 - Checked for duplicate records: none found in either dataset.
 - Created a classification-specific dataset with 1,090 matches by excluding 5 matches with unknown winners.
-- Retained all 260,920 delivery records.
 - Standardized historical franchise names in working copies using a mapping dictionary:
 	- Delhi Daredevils, Delhi Capitals → Canonical name: Delhi Capitals
 	- Kings XI Punjab, Punjab Kings → Canonical name: Punjab Kings
