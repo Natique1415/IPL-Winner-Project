@@ -120,7 +120,7 @@ def save_evaluation(
         confusion_matrix=confusion_matrix(y_true, y_pred, labels=[0, 1]),
         display_labels=["Team 2 wins", "Team 1 wins"],
     ).plot(ax=axes[0], colorbar=False)
-    axes[0].set_title(f"{model_name} — Test Confusion Matrix")
+    axes[0].set_title(f"{model_name} : Test Confusion Matrix")
     axes[0].set_xlabel("Predicted")
     axes[0].set_ylabel("Actual")
 
@@ -136,7 +136,7 @@ def save_evaluation(
     bars = axes[1].bar(metric_names, values)
     axes[1].set_ylim(0, 1.1)
     axes[1].set_ylabel("Score")
-    axes[1].set_title(f"{model_name} — Test Metrics")
+    axes[1].set_title(f"{model_name} : Test Metrics")
     axes[1].tick_params(axis="x", rotation=25)
     for bar, value in zip(bars, values):
         axes[1].text(
